@@ -5,10 +5,12 @@ import {
 } from "react-navigation";
 import Icon from "react-native-vector-icons/FontAwesome5";
 import MemoryScreen from "./Memory";
-import CPUScreen from "./CPU";
+import CPUScreen from "./Home";
+import BuscarCandidato from "./BuscarCandidato";
+import CompararCandidatos from "./CompararCandidato";
 
 const SettingsTabs = createBottomTabNavigator({
-  CPU: {
+  HomeScreen: {
     screen: CPUScreen,
     navigationOptions: {
       title: "Home",
@@ -18,7 +20,7 @@ const SettingsTabs = createBottomTabNavigator({
     }
   },
   BuscarCandidato: {
-    screen: MemoryScreen,
+    screen: BuscarCandidato,
     navigationOptions: {
       tabBarLabel: "Buscar Candidato",
       tabBarIcon: ({ tintColor }) => (
@@ -27,7 +29,7 @@ const SettingsTabs = createBottomTabNavigator({
     }
   },
   CompararCandidatos: {
-    screen: MemoryScreen,
+    screen: CompararCandidatos,
     navigationOptions: {
       tabBarLabel: "Comparar Perfiles",
       tabBarIcon: ({ tintColor }) => (
